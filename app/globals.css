@@ -21,11 +21,30 @@
 
 .caixa3{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 600px;
   height: 800px;
+}
+
+.caixa4{
+ width: 100%;
+ height: 100%;
+}
+
+.botao{
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 15px;
+  width: 60px;
+  height: 25px;
+}
+
+.botao:hover{
+  background-color: rgb(255, 179, 38);
+  transition: 0.2s ease-in-out;
 }
 
 .titulo{

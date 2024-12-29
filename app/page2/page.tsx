@@ -4,8 +4,20 @@ export default function Page2(){
     return (
         <div className="flex items-center justify-center h-screen">
             <div className="bg-yellow-100 caixa3">
+
+                <div className="caixa3">
+
+                <div className="text-gray-700 font-semibold titulo p-5">
+                    Cadastre-se
+                </div>
+
                 <div className="">
-                <Input/>
+                    <Input/>
+                </div>
+
+                <div>
+                    <button className="text-white font-semibold bg-orange-400 botao ">Enviar</button>
+                </div>
                 </div>
             </div>
         </div>
