@@ -9,6 +9,9 @@ export default function Home() {
           <h1 className="titulo mb-5">Welcome</h1>
           <Input/>
           <Mensagem/>
+          <div>
+            <button className="bg-white text-black botao2">Login</button>
+          </div>
       </div>
       <div className="caixa2">
 

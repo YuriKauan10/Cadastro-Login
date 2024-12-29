@@ -3,11 +3,11 @@ import Input from "../components/Input"
 export default function Page2(){
     return (
         <div className="flex items-center justify-center h-screen">
-            <div className="bg-yellow-100 caixa3">
+            <div className=" caixa3">
 
-                <div className="caixa3">
+                <div className="caixa4 ">
 
-                <div className="text-gray-700 font-semibold titulo p-5">
+                <div className="text-gray-800 font-semibold titulo p-5">
                     Cadastre-se
                 </div>
 
