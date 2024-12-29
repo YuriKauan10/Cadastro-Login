@@ -3,6 +3,64 @@
 @tailwind utilities;
 
 
+.caixa1{
+  background-color: rgb(70, 70, 70);
+  width: 500px;
+  height: 500px;
+}
+
+.curto{
+  letter-spacing: -0.1;
+}
+
+.caixa2{
+  background-color: white;
+  width: 400px;
+  height: 500px;
+}
+
+.caixa3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 600px;
+  height: 800px;
+}
+
+.titulo{
+  font-size: 30px;
+}
+
+.inputTexto{
+  color: black;
+  width: 210px;
+  padding: 3px;
+}
+
+.inputSenha{
+  color: black;
+  width: 210px;
+  padding: 3px;
+}
+
+.cadastrar{
+  color: rgb(255, 174, 0);
+  cursor: pointer;
+}
+
+.cadastrar:hover{
+  color: rgb(240, 174, 33);
+  transition: ease-in-out;
+}
+
+.inputTexto:focus{
+  outline: none;
+}
+
+.inputSenha:focus{
+  outline: none;
+}
 
 :root {
   --background: #ffffff;
