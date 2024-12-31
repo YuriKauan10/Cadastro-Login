@@ -9,25 +9,57 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: montserrat;
+  background: linear-gradient(90deg, var(--background), rgb(71, 71, 71)); 
+  background-size: 500% 100%;
+  animation: fundo 10s infinite linear ;
+  animation-direction: alternate-reverse;
 }
+
+
 
 .caixa1{
   background-color: rgb(70, 70, 70);
   width: 500px;
   height: 500px;
+  animation: direita 2s;
 }
 
+
+
+.botao2{
+  background-color: rgb(24, 24, 24);
+  color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 15px;
+  width: 60px;
+  height: 25px;
+  animation: botao 1s;
+  animation-delay: 4s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.botao2:hover{
+  background-color: white;
+  color: black;
+  transition: 0.2s ease-in-out;
+}
 .curto{
   letter-spacing: -0.1;
 }
-
 .caixa2{
   background-color: white;
   width: 400px;
   height: 500px;
+  animation: esquerda 1s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
 }
+
+
 
 .caixa3{
   display: flex;
@@ -36,12 +68,40 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #171717;
-  /* background-image: url(fundo.jpg);
-  background-size: cover; */
   width: 600px;
   height: 800px;
+  animation: pop 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+@keyframes pop{
+  to{
+    transform:scale(1);
+  }
+
+  from{
+    transform: scale(0);
+  }
+}
+
+.titulo{
+  font-size: 30px;
+  margin-bottom: 20px;
+
+  animation: descer 1s;
+}
+
+@keyframes descer{
+  0%{
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0px);
+    opacity: 100;
+  }
+}
 .caixa4{
   background-color: #fafafa;
   outline: 2px solid black;
@@ -81,45 +141,6 @@ body {
   to{
     transform: translateY(0px);
     opacity: 1;
-  }
-}
-
-.botao2{
-  background-color: rgb(24, 24, 24);
-  color: white;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-size: 15px;
-  width: 60px;
-  height: 25px;
-  animation: botao 1s;
-  animation-delay: 4s;
-  animation-fill-mode: backwards;
-  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-
-.botao2:hover{
-  background-color: white;
-  color: black;
-  transition: 0.2s ease-in-out;
-}
-
-.titulo{
-  font-size: 30px;
-  margin-bottom: 20px;
-
-  animation: descer 1s;
-}
-
-@keyframes descer{
-  0%{
-    transform: translateY(-300px);
-    opacity: 0;
-  }
-
-  100%{
-    transform: translateY(0px);
-    opacity: 100;
   }
 }
 
