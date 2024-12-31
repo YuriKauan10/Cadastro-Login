@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: montserrat;
+  src: url('/Montserrat-Bold.ttf');
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: montserrat;
+}
 
 .caixa1{
   background-color: rgb(70, 70, 70);
@@ -48,9 +58,13 @@
 .botao{
   border-radius: 8px;
   margin-top: 20px;
-  font-size: 15px;
-  width: 60px;
-  height: 25px;
+  font-size: 17px;
+  width: 70px;
+  height: 35px;
+  animation: botao 1s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .botao:hover{
@@ -58,14 +72,30 @@
   transition: 0.2s ease-in-out;
 }
 
+@keyframes botao {
+  from{
+    transform: translateY(190px);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .botao2{
-  background-color: black;
+  background-color: rgb(24, 24, 24);
   color: white;
   border-radius: 8px;
   margin-top: 20px;
   font-size: 15px;
   width: 60px;
   height: 25px;
+  animation: botao 1s;
+  animation-delay: 4s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .botao2:hover{
@@ -76,13 +106,44 @@
 
 .titulo{
   font-size: 30px;
+  margin-bottom: 20px;
+
+  animation: descer 1s;
+}
+
+@keyframes descer{
+  0%{
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0px);
+    opacity: 100;
+  }
 }
 
 .inputTexto{
+  animation: direita 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
   background-color: rgb(218, 218, 218);
   color: black;
   width: 210px;
   padding: 3px;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes direita {
+  from{
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .inputTexto::placeholder{
@@ -95,6 +156,22 @@
   color: black;
   width: 210px;
   padding: 3px;
+  animation: esquerda 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes esquerda {
+  from{
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .inputSenha::placeholder{
@@ -105,11 +182,21 @@
 .cadastrar{
   color: rgb(255, 174, 0);
   cursor: pointer;
+  animation: esquerda 1.5s;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+  transition: 0.5s ease-in-out;
 }
 
 .cadastrar:hover{
-  color: rgb(240, 174, 33);
-  transition: ease-in-out;
+  color: rgb(255, 194, 62);
+  font-size: 17px;
+}
+
+.msg{
+  animation: direita 2s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
 }
 
 .inputTexto:focus{
@@ -132,8 +219,3 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}

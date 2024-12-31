@@ -7,7 +7,7 @@ export default function Page2(){
 
                 <div className="caixa4 ">
 
-                <div className="text-gray-800 font-semibold titulo p-5">
+                <div className="text-gray-800 font-semibold titulo">
                     Cadastre-se
                 </div>
 

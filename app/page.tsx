@@ -10,7 +10,7 @@ export default function Home() {
           <Input/>
           <Mensagem/>
           <div>
-            <button className="bg-white text-black botao2">Login</button>
+            <button className="botao2">Login</button>
           </div>
       </div>
       <div className="caixa2">
